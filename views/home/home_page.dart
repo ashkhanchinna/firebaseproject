@@ -56,7 +56,11 @@ class _HomePageState extends State<HomePage> {
                     ),
                     title: Text(data.firstName.toString()),
                     subtitle: Text(data.address.toString()),
-                    onTap: () {},
+                    onTap: () {
+                    Get.to(() => DetailPage(
+                            user: data,
+                          ));
+                    },
                   );
                 })));
   }
